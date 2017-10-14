@@ -2,21 +2,27 @@ package com.math.kids;
 import java.util.Scanner;
 
 public class MainLoader {
-	static AdditionClass addition = new AdditionClass(); 
-	static SubtractionClass subtraction = new SubtractionClass();
-	static DivisionClass division = new DivisionClass();
-	static MultiplicationClass multiplication = new MultiplicationClass();
+	static Addition addition = new Addition(); 
+	static Subtraction subtraction = new Subtraction();
+	static Division division = new Division();
+	static Multiplication multiplication = new Multiplication();
+	
+	static boolean menuLooper;
+	static int mainMenu;
 	
 	public static void main(String args[ ]) {
 		System.out.println("Random Math Java has Sucessfully loaded!");
 		
 		typeLoader();
+		
+		System.out.println("System Error, Reloading Whole Program");
+		
+		typeLoader();
 	}
 	
 public static void typeLoader() {
-		int mainMenu = 0;
-		boolean menuLooper = true;
-		@SuppressWarnings("resource")
+		mainMenu = 0;
+		menuLooper = true;
 		Scanner input = new Scanner(System.in);
 		
 		while (menuLooper == true) {
@@ -49,7 +55,7 @@ public static void typeLoader() {
 			} else if (mainMenu == 5) {
 				System.out.println("Loading Randomizer..");
 				System.out.println("Warning: In Early Stages");
-				RandomizerClass.chooserRandomizer();
+				Randomizer.chooserRandomizer();
 				
 			} else {
 				System.out.println("Sorry but this is not an area you can go to..");
@@ -57,5 +63,6 @@ public static void typeLoader() {
 				
 			}
 		}
+		input.close();
 	}
 }

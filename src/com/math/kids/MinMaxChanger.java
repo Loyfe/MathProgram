@@ -1,6 +1,6 @@
 package com.math.kids;
 
-public class MinMaxChangerClass {
+public class MinMaxChanger {
 
 	public int minimumChangerAddition(int score) { //minimum changer
 		if (score <= 10) {

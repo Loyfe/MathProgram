@@ -1,28 +1,20 @@
 package com.math.kids;
 import java.util.Scanner;
-import java.util.Random;
 
-public class RandomizerClass {
+public class Randomizer {
 	private static int num01;
 	private static int num02;
 	private static int ans;
 	private static int personAns;
 	private static int score;
-	private static int saying;
 	private static int area;
 	private static boolean answerType;
-	static MinMaxChangerClass minmax = new MinMaxChangerClass();
-	
-	public static int randInt(int min, int max) { //random int generator
-	    Random rand = new Random();
-	    
-	    int randomNum = rand.nextInt((max - min) + 1) + min;
-
-	    return randomNum;
-	}
+	static MinMaxChanger minmax = new MinMaxChanger();
+	static RandomInt randomint = new RandomInt();
+	static RandomMessage randommsg = new RandomMessage();
 	
 	public static void chooserRandomizer() { //main randomizer method
-		area = randInt(1, 4);
+		area = randomint.randInt(1, 4);
 		
 		switch (area) {
 		case 1:
@@ -47,8 +39,8 @@ public class RandomizerClass {
 	
 	public static void questioneerAddition() { //addition questions
 		Scanner mainScanner = new Scanner(System.in);
-		num01 = randInt(minmax.minimumChangerAddition(score), minmax.maximumChangerAddition(score));
-		num02= randInt(minmax.minimumChangerAddition(score), minmax.maximumChangerAddition(score));
+		num01 = randomint.randInt(minmax.minimumChangerAddition(score), minmax.maximumChangerAddition(score));
+		num02= randomint.randInt(minmax.minimumChangerAddition(score), minmax.maximumChangerAddition(score));
 		ans = num01 + num02;
 		
 		System.out.println("Addition Area");
@@ -61,7 +53,7 @@ public class RandomizerClass {
 			
 			System.out.println("Present Score: " + score);
 			
-			randomMessage();
+			randommsg.randomMessage(answerType);
 			chooserRandomizer();
 		} else {
 			System.out.println("Final Score: " + score);
@@ -69,7 +61,7 @@ public class RandomizerClass {
 			answerType = false;
 			score = scoreReset();
 			
-			randomMessage();
+			randommsg.randomMessage(answerType);
 			
 			System.out.println("Reloading Randomizer..");
 			
@@ -80,8 +72,8 @@ public class RandomizerClass {
 	
 	public static void questioneerSubtraction() { //subtraction questions
 		Scanner mainScanner = new Scanner(System.in);
-		num01 = randInt(minmax.minimumChangerSubtraction(score), minmax.maximumChangerSubtraction(score));
-		num02= randInt(minmax.minimumChangerSubtraction(score), minmax.maximumChangerSubtraction(score));
+		num01 = randomint.randInt(minmax.minimumChangerSubtraction(score), minmax.maximumChangerSubtraction(score));
+		num02= randomint.randInt(minmax.minimumChangerSubtraction(score), minmax.maximumChangerSubtraction(score));
 		ans = num01 - num02;
 		
 		System.out.println("Subtraction Area");
@@ -103,7 +95,7 @@ public class RandomizerClass {
 			
 			System.out.println("Present Score: " + score);
 			
-			randomMessage();
+			randommsg.randomMessage(answerType);
 			chooserRandomizer();
 		} else {
 			System.out.println("Final Score: " + score);
@@ -111,7 +103,7 @@ public class RandomizerClass {
 			answerType = false;
 			score = scoreReset();
 			
-			randomMessage();
+			randommsg.randomMessage(answerType);
 			
 			System.out.println("Reloading Randomizer..");
 			
@@ -125,8 +117,8 @@ public class RandomizerClass {
 		boolean looper = true;
 		
 		while (looper == true) { //main division looper
-				num01  = randInt(minmax.minimumChangerDivision(score), minmax.maximumChangerDivision(score));
-				num02 = randInt(minmax.minimumChangerDivision(score), minmax.maximumChangerDivision(score));
+				num01  = randomint.randInt(minmax.minimumChangerDivision(score), minmax.maximumChangerDivision(score));
+				num02 = randomint.randInt(minmax.minimumChangerDivision(score), minmax.maximumChangerDivision(score));
 				ans = num01 % num02;
 		
 				divisionChecker();
@@ -145,13 +137,13 @@ public class RandomizerClass {
 					scoreAdder();
 					System.out.println("Present Score: " + score);
 					answerType = true;
-					randomMessage();
+					randommsg.randomMessage(answerType);
 				} else {
 					System.out.println("Final Score: " + score);
 					System.out.println("Incorrect");
 					answerType = false;
 					score = scoreReset();
-					randomMessage();
+					randommsg.randomMessage(answerType);
 					System.out.println("Reloading Division..");
 				}
 				chooserRandomizer();
@@ -164,8 +156,8 @@ public class RandomizerClass {
 		boolean looper = true;
 		
 		while (looper == true) { //main multiplication looper
-				num01  = randInt(minmax.minimumChangerMultiplication(score), minmax.maximumChangerMultiplication(score));
-				num02 = randInt(minmax.minimumChangerMultiplication(score), minmax.maximumChangerMultiplication(score));
+				num01  = randomint.randInt(minmax.minimumChangerMultiplication(score), minmax.maximumChangerMultiplication(score));
+				num02 = randomint.randInt(minmax.minimumChangerMultiplication(score), minmax.maximumChangerMultiplication(score));
 				ans = num01 - num02;
 		
 				System.out.println("What is " + num01 + " * " + num02 + "? ");
@@ -175,13 +167,13 @@ public class RandomizerClass {
 					scoreAdder();
 					System.out.println("Present Score: " + score);
 					answerType = true;
-					randomMessage();
+					randommsg.randomMessage(answerType);
 				} else {
 					System.out.println("Final Score: " + score);
 					System.out.println("Incorrect");
 					answerType = false;
 					score = scoreReset();
-					randomMessage();
+					randommsg.randomMessage(answerType);
 					System.out.println("Reloading Multiplication..");
 				}
 				chooserRandomizer();
@@ -194,8 +186,8 @@ public class RandomizerClass {
 		
 		while (checkerLoop == true) {
 			if (num01 % num02 != 0) {
-				num01  = randInt(minmax.minimumChangerDivision(score), minmax.maximumChangerDivision(score));
-				num02 = randInt(minmax.minimumChangerDivision(score), minmax.maximumChangerDivision(score));
+				num01  =randomint.randInt(minmax.minimumChangerDivision(score), minmax.maximumChangerDivision(score));
+				num02 = randomint.randInt(minmax.minimumChangerDivision(score), minmax.maximumChangerDivision(score));
 				ans = num01 / num02;
 			} else {
 				checkerLoop = false;
@@ -209,56 +201,5 @@ public class RandomizerClass {
 	
 	public static int scoreReset() { //score reseter
 		return 0;
-	}
-	
-	public static void randomMessage() { //random message if answer incorrect or correct
-		saying = randInt(1,6);
-		if (answerType == true) {
-			switch (saying) {
-				case 1: 
-					System.out.println("Correct! You should be feeling proud.");
-					break;
-				case 2:
-					System.out.println("Hm, seems like you know a bit of everything.");
-					break;
-				case 3:
-					System.out.println("Have you been doing your homework, because you know a bit of this.");
-					break;
-				case 4:
-					System.out.println("Wow, you got it correct!");
-					break;
-				case 5:
-					System.out.println("Spectacular, keep up the work.");
-					break;
-				case 6:
-					System.out.println("Please keep doing this good, you're doing so well!");
-					break;
-				default:
-					break;
-			}
-		} else if (answerType == false){
-			switch (saying) {
-			case 1: 
-				System.out.println("Come on, get your game up..");
-				break;
-			case 2:
-				System.out.println("You were doing so well.");
-				break;
-			case 3:
-				System.out.println("Why did you suddenly fail?");
-				break;
-			case 4:
-				System.out.println("You will do better next time.");
-				break;
-			case 5:
-				System.out.println("Maybe paying attention to math class could get you a better score.");
-				break;
-			case 6:
-				System.out.println("Well, try your best next time..");
-				break;
-			default:
-				break;
-			}
-		}
 	}
 }

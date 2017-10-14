@@ -14,3 +14,9 @@ Version 1.0.2
   - Changed Maximum and Minimum Values for Subtraction
   - Changed Maximum and Minimum Values for Division
   - Changed Maximum and Minimum Values for Multiplication
+
+ Version 1.0.3
+  - Changed Class Names
+  - Made a Random Integer Class and Random Message
+  - Added More Random Message when Answer Incorrect or Correct
+  - A Reset Incase of a Program Failure   
