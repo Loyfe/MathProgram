@@ -8,3 +8,9 @@ Version 1.0.0
  
 Version 1.0.1
   - Unlocked All Testing Classes
+
+Version 1.0.2
+  - Changed Maximum and Minimum Values for Addition
+  - Changed Maximum and Minimum Values for Subtraction
+  - Changed Maximum and Minimum Values for Division
+  - Changed Maximum and Minimum Values for Multiplication
