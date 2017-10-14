@@ -6,7 +6,6 @@ public class MainLoader {
 	static SubtractionClass subtraction = new SubtractionClass();
 	static DivisionClass division = new DivisionClass();
 	static MultiplicationClass multiplication = new MultiplicationClass();
-	static int code = 999;
 	
 	public static void main(String args[ ]) {
 		System.out.println("Random Math Java has Sucessfully loaded!");
@@ -34,48 +33,23 @@ public static void typeLoader() {
 				addition.questioneerAddition();
 				
 			} else if (mainMenu == 2) {
-				int userInput;
 				System.out.println("Loading Subtration..");
-				System.out.println("Error this is at beta testing level..");
-				System.out.println("Code to Unlock (Integer): ");
-				userInput = input.nextInt();
-				if (userInput == code) {
-					subtraction.questioneerSubtraction();
-				} else {
-					System.out.println("Incorrect Code");
-					System.out.println("Reloading Main Menu..");
-				}
-				
+				subtraction.questioneerSubtraction();
 				
 			} else if (mainMenu == 3) {
-				int userInput;
 				System.out.println("Loading Division..");
-				System.out.println("Error this is at beta testing level..");
-				System.out.println("Code to Unlock (Integer): ");
-				userInput = input.nextInt();
-				if (userInput == code) {
-					division.questioneerDivision();
-				} else {
-					System.out.println("Incorrect Code");
-					System.out.println("Reloading Main Menu..");
-				}
+				System.out.println("Warning: In Early Stages");
+				division.questioneerDivision();
 				
 			} else if (mainMenu == 4) {
 				System.out.println("Loading Multiplication..");
+				System.out.println("Warning: In Early Stages");
 				multiplication.questioneerMultiplication();
 				
 			} else if (mainMenu == 5) {
-				int userInput;
 				System.out.println("Loading Randomizer..");
-				System.out.println("Error this is at beta testing level..");
-				System.out.println("Code to Unlock (Integer): ");
-				userInput = input.nextInt();
-				if (userInput == code) {
-					RandomizerClass.chooserRandomizer();
-				} else {
-					System.out.println("Incorrect Code");
-					System.out.println("Reloading Main Menu..");
-				}
+				System.out.println("Warning: In Early Stages");
+				RandomizerClass.chooserRandomizer();
 				
 			} else {
 				System.out.println("Sorry but this is not an area you can go to..");
