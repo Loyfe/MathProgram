@@ -128,124 +128,124 @@ public class MinMaxChangerClass {
 
 	public int minimumChangerDivision(int score) { //minimum changer
 		if (score <= 10) {
-			return 5;
+			return 0;
 		} else if (score <= 15) {
-			return 20;
+			return 4;
 		} else if (score <= 25) {
-			return 30;
+			return 6;
 		} else if (score <= 30) {
-			return 45;
+			return 10;
 		} else if (score <= 40) {
-			return 100;
+			return 24;
 		} else if (score <=45) {
-			return 150;
+			return 48;
 		} else if (score <= 55) {
-			return 280;
+			return 60;
 		} else if (score <= 60) {
-			return 400;
+			return 72;
 		} else if (score <= 70) {
-			return 800;
+			return 100;
 		} else if (score <= 75) {
-			return 1000;
+			return 112;
 		} else if (score <= 85) {
-			return 2000;
+			return 150;
 		} else if (score <= 90) {
-			return 4000;
+			return 200;
 		} else if (score <= 100) {
-			return 8000;
+			return 400;
 		}
 		return 0;
 	}
 	
 	public int maximumChangerDivision(int score) { //maximum changer
 		if (score <= 10) {
-			return 50;
+			return 6;
 		} else if (score <= 15) {
-			return 75;
+			return 12;
 		} else if (score <= 25) {
-			return 250;
+			return 16;
 		} else if (score <= 30) {
-			return 750;
+			return 20;
 		} else if (score <= 40) {
-			return 1000;
+			return 30;
 		} else if (score <=45) {
-			return 1350;
+			return 36;
 		} else if (score <= 55) {
-			return 1800;
+			return 44;
 		} else if (score <= 60) {
-			return 2600;
+			return 80;
 		} else if (score <= 70) {
-			return 5000;
+			return 150;
 		} else if (score <= 75) {
-			return 8000;
+			return 300;
 		} else if (score <= 85) {
-			return 10000;
+			return 500;
 		} else if (score <= 90) {
-			return 15000;
+			return 1000;
 		} else if (score <= 100) {
-			return 23000;
+			return 4000;
 		}
 		return 0;
 	}
 
 	public int minimumChangerMultiplication(int score) { //minimum changer
 		if (score <= 10) {
-			return 5;
+			return 0;
 		} else if (score <= 15) {
-			return 20;
+			return 4;
 		} else if (score <= 25) {
-			return 30;
+			return 10;
 		} else if (score <= 30) {
-			return 45;
+			return 12;
 		} else if (score <= 40) {
-			return 100;
+			return 16;
 		} else if (score <=45) {
-			return 150;
+			return 24;
 		} else if (score <= 55) {
-			return 280;
+			return 35;
 		} else if (score <= 60) {
-			return 400;
+			return 50;
 		} else if (score <= 70) {
-			return 800;
+			return 64;
 		} else if (score <= 75) {
-			return 1000;
+			return 88;
 		} else if (score <= 85) {
-			return 2000;
+			return 100;
 		} else if (score <= 90) {
-			return 4000;
+			return 112;
 		} else if (score <= 100) {
-			return 8000;
+			return 136;
 		}
 		return 0;
 	}
 	
 	public int maximumChangerMultiplication(int score) { //maximum changer
 		if (score <= 10) {
-			return 50;
+			return 6;
 		} else if (score <= 15) {
-			return 75;
+			return 12;
 		} else if (score <= 25) {
-			return 250;
+			return 20;
 		} else if (score <= 30) {
-			return 750;
+			return 34;
 		} else if (score <= 40) {
-			return 1000;
+			return 50;
 		} else if (score <=45) {
-			return 1350;
+			return 64;
 		} else if (score <= 55) {
-			return 1800;
+			return 80;
 		} else if (score <= 60) {
-			return 2600;
+			return 100;
 		} else if (score <= 70) {
-			return 5000;
+			return 108;
 		} else if (score <= 75) {
-			return 8000;
+			return 120;
 		} else if (score <= 85) {
-			return 10000;
+			return 136;
 		} else if (score <= 90) {
-			return 15000;
+			return 150;
 		} else if (score <= 100) {
-			return 23000;
+			return 200;
 		}
 		return 0;
 	}
